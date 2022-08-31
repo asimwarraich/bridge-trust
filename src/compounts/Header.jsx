@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(true);
@@ -33,7 +34,7 @@ export default function Header() {
             : "header__wraper"
         }
       >
-        <div className="header__logo">
+        <Link to={"/"} className="header__logo">
           <svg width="194" height="93.208" viewBox="0 0 194 93.208">
             <defs>
               <linearGradient
@@ -126,13 +127,13 @@ export default function Header() {
               </text>
             </g>
           </svg>
-        </div>
+        </Link>
         {isOpen ? (
           <div className="header__content">
-            <a href="#" className="header__contant__link">
+            <NavLink to={"/invester"} className="header__contant__link">
               Invester
               <title>Invester</title>
-            </a>
+            </NavLink>
             <a href="#" className="header__contant__link">
               Start-Up
               <title>Start-Up</title>

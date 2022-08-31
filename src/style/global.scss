@@ -374,6 +374,40 @@ body {
   align-items: center;
   margin: 16px 0px;
 }
+.invester__header__container {
+  width: 100%;
+  position: relative;
+}
+.invester__header__container img {
+  width: 100%;
+  height: 400px;
+  margin-top: 4em;
+}
+.invester__main__contant {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 10%;
+  left: 0;
+  right: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3px 12px;
+}
+.invester__main__contant___heding {
+  font-size: 30px;
+  font-weight: 700;
+  color: #cf902a;
+  padding: 5px 0px;
+}
+.invester__main__contant___sub__heding {
+  color: white;
+  font-size: 18px;
+}
 @media (max-width: 600px) {
   .chooseus__contant__wraper__card {
     flex-direction: column;
