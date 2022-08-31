@@ -1,8 +1,8 @@
 import React, { useLayoutEffect } from "react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(true);
+  const [isScrolling, setIsScrolling] = React.useState(false);
   function checkNavOpenClose() {
     if (window.innerWidth < 850) {
       setIsOpen(false);
@@ -14,7 +14,9 @@ export default function Header() {
   useLayoutEffect(() => {
     checkNavOpenClose();
     window.addEventListener("resize", checkNavOpenClose);
+
     window.addEventListener("scroll", () => {
+      checkNavOpenClose();
       if (window.scrollY > 0) {
         setIsScrolling(true);
       } else {
@@ -157,9 +159,9 @@ export default function Header() {
           }}
         >
           {isOpen ? (
-            <Close size="24" color="white" />
+            <Close size="24" color="currentcolor" />
           ) : (
-            <Menu size="24" color="white" />
+            <Menu size="24" color="currentcolor" />
           )}
         </button>
       </div>
