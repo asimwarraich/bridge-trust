@@ -4,7 +4,9 @@ import { invest } from "../assests";
 import CheckBox from "react-checkbox-css";
 
 export default function Invester() {
-  const [isChecked, setIschecked] = useState(false);
+  const array = ["label", "label1", "label2"];
+  const [selectedArray, setSelectedArray] = useState([]);
+  console.log(selectedArray);
   return (
     <>
       <Header />
@@ -43,21 +45,38 @@ export default function Invester() {
               <div className="invester__container__form__input__box__label">
                 Investor Type
               </div>
-              <CheckBox
-                value={isChecked}
-                label="Venture Capitalist  "
-                labelColor="#242424"
-                checkedColor="#081b35"
-                unCheckedColor="#fff"
-                iconColor="#ffffff"
-                onChange={() => {
-                  isChecked ? setIschecked(false) : setIschecked(true);
-                }}
-              />
+              {array.map((item, index) => (
+                <CheckboxWrapper
+                  item={item}
+                  selectedArray={selectedArray}
+                  setSelectedArray={setSelectedArray}
+                />
+              ))}
             </div>
           </form>
         </div>
       </div>
     </>
+  );
+}
+
+function CheckboxWrapper({ item, setSelectedArray, selectedArray }) {
+  const [isChecked, setIschecked] = useState(false);
+  return (
+    <CheckBox
+      value={isChecked}
+      label={item}
+      labelColor="#242424"
+      checkedColor="#081b35"
+      unCheckedColor="#fff"
+      iconColor="#ffffff"
+      onChange={(e) => {
+        isChecked ? setIschecked(false) : setIschecked(true);
+
+        e.target.checked
+          ? setSelectedArray([...selectedArray, item])
+          : setSelectedArray(selectedArray.filter((b) => b !== item));
+      }}
+    />
   );
 }
