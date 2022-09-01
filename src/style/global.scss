@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(177, 177, 177);
+  // background-color: rgb(177, 177, 177);
   font-family: "Montserrat", sans-serif;
 }
 .header__wraper {
@@ -24,7 +24,6 @@ body {
   padding-top: 4px;
   z-index: 999;
   overflow: visible;
-  background-color: #ededed;
 }
 .header__wraper__active {
   background-color: #000000;
@@ -41,9 +40,13 @@ body {
 .header__contant__link {
   text-decoration: none;
   padding: 1em;
-  color: var(--heading);
+  // color: var(--heading);
+  color: white;
   font-size: 16px;
   font-weight: 400;
+}
+.header__contant__link:hover {
+  color: var(--heading);
 }
 .trust__menu__btn {
   display: none;
@@ -189,9 +192,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1em;
+
   padding: 3em 0em;
-  background-color: #b9b6b6;
+  background-color: #e4e4e4;
 }
 .milestone__container__heading {
   font-size: 28px;
@@ -238,12 +241,12 @@ body {
   font-weight: 600;
   color: var(--primart);
 }
-.choose__container {
+.work__container {
   width: 100%;
-  background-color: rgb(220, 214, 205);
+  background-color: #f6f6f6;
   padding: 2em 0em;
 }
-.choose__container__contant__wraper {
+.work__container__contant__wraper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -254,7 +257,7 @@ body {
   padding: 3em 0em;
 }
 
-.chooseus__contant__wraper__card {
+.workus__contant__wraper__card {
   width: 100%;
   display: flex;
   align-items: center;
@@ -262,12 +265,12 @@ body {
   justify-content: center;
   padding: 2em 0.5em;
 }
-.choose__wraper__heading {
+.work__wraper__heading {
   font-size: 32px;
   color: #030303;
   font-weight: 700;
 }
-.choose__wraper__card {
+.work__wraper__card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,20 +278,59 @@ body {
   padding: 1em;
 }
 
-.choose__wraper__card__svg svg {
+.work__wraper__card__svg svg {
   width: 90px;
   height: 90px;
 }
-.choose__wraper__text {
+.work__wraper__text {
   margin-top: 1em;
   font-size: 16px;
   color: #081b35;
   text-align: center;
   font-weight: 700;
 }
-.choose__dot__line {
+.work__dot__line {
   display: flex;
   align-items: center;
+}
+
+.choose__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em 1em;
+  background-color: #15335d;
+}
+.choose__container__heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  margin: 12px 0px;
+}
+.choose__container__card__wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0em;
+}
+.choose__us__card {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.choose__us__card__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin: 12px 0px;
+}
+.choose__us__card__sub__title {
+  color: white;
+  text-align: center;
 }
 .footer__container {
   width: 100%;
@@ -300,12 +342,12 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-.choose__wraper__card__heading {
+.work__wraper__card__heading {
   margin: 8px 0px;
   font-size: 20px;
   color: white;
 }
-.choose__wraper__card__sub__heading {
+.work__wraper__card__sub__heading {
   margin: 8px 0px;
   font-size: 16px;
   color: white;
@@ -381,17 +423,14 @@ body {
 .invester__header__container img {
   width: 100%;
   height: 400px;
-  margin-top: 4em;
 }
 .invester__main__contant {
-  width: 100%;
-  height: 100%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  top: 10%;
+  top: 40%;
   left: 0;
   right: 0;
   max-width: 1440px;
@@ -408,8 +447,75 @@ body {
   color: white;
   font-size: 18px;
 }
+.invester__all__input__container {
+  width: 100%;
+}
+.start__up__container {
+  padding: 3em;
+}
+.start__up__container__form {
+  border-radius: 9px;
+  padding: 3em;
+  background-color: #dedee4;
+}
+.invester__name__input {
+  width: 100%;
+  margin: 2em 0em;
+}
+
+.invester__input__start__div {
+  display: flex;
+}
+.invester__start {
+  padding: 0px 3px;
+  color: red;
+}
+.invester__input__label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primart);
+}
+.invester__name__input input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 12px 0px;
+  border-bottom: 1px solid black;
+}
+.invester__name__input input:hover {
+  border-bottom: 2px solid var(--primart);
+}
+.error__invester {
+  padding-top: 5px;
+  color: rgb(166, 73, 73);
+  font-size: 12px;
+}
+.invester__container__form__input__box {
+  width: 100%;
+}
+.start__up__container__form__input__box__label {
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primart);
+  margin-bottom: 6px;
+}
+.invester__container__form__input__box__label__requird {
+  color: red;
+}
+.invester__container__form__input__box__content {
+  display: flex;
+  align-items: center;
+}
+.invester__container__form__input__box__content input {
+  margin: 0px;
+}
+.invester__container__form__input__box__content__label {
+  margin-left: 9px;
+}
 @media (max-width: 600px) {
-  .chooseus__contant__wraper__card {
+  .workus__contant__wraper__card {
     flex-direction: column;
   }
   .main__container__contant__heading {
@@ -424,11 +530,11 @@ body {
   }
 }
 @media (max-width: 750px) {
-  .choose__wraper__heading {
+  .work__wraper__heading {
     font-size: 24px;
   }
-  .chooseus__contant__wraper__card {
-    .choose__dot__line {
+  .workus__contant__wraper__card {
+    .work__dot__line {
       display: none;
     }
   }

@@ -3,6 +3,7 @@ import Header from "../compounts/Header";
 import { landing } from "../assests";
 import Invest from "../compounts/Invest";
 import MileCard from "../compounts/MileCard";
+import Choose from "../compounts/Choose";
 export default function Landing() {
   return (
     <>
@@ -359,13 +360,13 @@ export default function Landing() {
           />
         </div>
       </div>
-      <div className="choose__container">
-        <div className="choose__container__contant__wraper">
-          <div className="choose__wraper__heading">How does Peervest work?</div>
+      <div className="work__container">
+        <div className="work__container__contant__wraper">
+          <div className="work__wraper__heading">How does Peervest work?</div>
 
-          <div className="chooseus__contant__wraper__card">
-            <div className="choose__wraper__card">
-              <div className="choose__wraper__card__svg">
+          <div className="workus__contant__wraper__card">
+            <div className="work__wraper__card">
+              <div className="work__wraper__card__svg">
                 <svg
                   width="97.887"
                   height="107.646"
@@ -442,9 +443,9 @@ export default function Landing() {
                   </g>
                 </svg>
               </div>
-              <div className="choose__wraper__text">Due Diligence</div>
+              <div className="work__wraper__text">Due Diligence</div>
             </div>
-            <div className="choose__dot__line">
+            <div className="work__dot__line">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="97"
@@ -463,8 +464,8 @@ export default function Landing() {
                 />
               </svg>
             </div>
-            <div className="choose__wraper__card">
-              <div className="choose__wraper__card__svg">
+            <div className="work__wraper__card">
+              <div className="work__wraper__card__svg">
                 <svg
                   id="Group_566"
                   data-name="Group 566"
@@ -556,11 +557,11 @@ export default function Landing() {
                   </g>
                 </svg>
               </div>
-              <div className="choose__wraper__text">
+              <div className="work__wraper__text">
                 Investor Readiness Services
               </div>
             </div>
-            <div className="choose__dot__line">
+            <div className="work__dot__line">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="97"
@@ -579,8 +580,8 @@ export default function Landing() {
                 />
               </svg>
             </div>
-            <div className="choose__wraper__card">
-              <div className="choose__wraper__card__svg">
+            <div className="work__wraper__card">
+              <div className="work__wraper__card__svg">
                 <svg
                   id="Group_564"
                   data-name="Group 564"
@@ -675,9 +676,9 @@ export default function Landing() {
                   </g>
                 </svg>
               </div>
-              <div className="choose__wraper__text">Investor Briefe</div>
+              <div className="work__wraper__text">Investor Briefe</div>
             </div>
-            <div className="choose__dot__line">
+            <div className="work__dot__line">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="97"
@@ -696,8 +697,8 @@ export default function Landing() {
                 />
               </svg>
             </div>
-            <div className="choose__wraper__card">
-              <div className="choose__wraper__card__svg">
+            <div className="work__wraper__card">
+              <div className="work__wraper__card__svg">
                 <svg
                   id="Group_568"
                   data-name="Group 568"
@@ -804,9 +805,9 @@ export default function Landing() {
                   </g>
                 </svg>
               </div>
-              <div className="choose__wraper__text">Connect to Investors</div>
+              <div className="work__wraper__text">Connect to Investors</div>
             </div>
-            <div className="choose__dot__line">
+            <div className="work__dot__line">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="97"
@@ -825,8 +826,8 @@ export default function Landing() {
                 />
               </svg>
             </div>
-            <div className="choose__wraper__card">
-              <div className="choose__wraper__card__svg">
+            <div className="work__wraper__card">
+              <div className="work__wraper__card__svg">
                 <svg
                   id="Group_570"
                   data-name="Group 570"
@@ -891,8 +892,52 @@ export default function Landing() {
                   </g>
                 </svg>
               </div>
-              <div className="choose__wraper__text">Funding Raised</div>
+              <div className="work__wraper__text">Funding Raised</div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="choose__container">
+        <div className="choose__container__heading">Why Choose Us?</div>
+        <div className="choose__container__card__wraper">
+          <Choose
+            svg={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="69.305"
+                height="69.278"
+                viewBox="0 0 69.305 69.278"
+              >
+                <path
+                  id="Path_21787"
+                  data-name="Path 21787"
+                  d="M898,289.48c-1.3-1.32-2.64-2.62-3.93-4a.53.53,0,0,0-.84-.06,8.33,8.33,0,0,1-4.89,1.61,9.33,9.33,0,0,1-1.06-.11A8.15,8.15,0,0,1,881.79,274c.18-.26.34-.44,0-.74-1.41-1.38-2.78-2.8-4.2-4.16a2.58,2.58,0,0,0-3.73,0c-2.39,2.35-4.74,4.74-7.12,7.09-.28.28-.17.35.07.53a5.21,5.21,0,0,1,1.23,1.25,1.3,1.3,0,0,1-1.89,1.75,4.369,4.369,0,0,1-1.06-1c-.33-.51-.49-.34-.81,0l-33.54,33.51a2.71,2.71,0,0,0,0,4.27c1.23,1.23,2.48,2.44,3.68,3.71.39.41.62.42,1.08.09a7.76,7.76,0,0,1,6.42-1.42,8.17,8.17,0,0,1,5,12.88c-.3.41-.32.62.07,1,1.24,1.19,2.44,2.42,3.65,3.64,1.57,1.57,3,1.58,4.57,0l27-26.94,6.44-6.43c.28-.27.44-.45,0-.76a4.1,4.1,0,0,1-.88-.93,1.3,1.3,0,0,1,1.8-1.83,4.591,4.591,0,0,1,.94.87c.32.4.5.31.81,0,2.21-2.24,4.45-4.46,6.67-6.69a2.7,2.7,0,0,0,.01-4.21Zm-25.34-5.57a1.23,1.23,0,0,1-1.16.67,3.12,3.12,0,0,1-2.22-2.18,1.27,1.27,0,0,1,.67-1.17,1.22,1.22,0,0,1,1.4,0,5.6,5.6,0,0,1,1.27,1.3A1.17,1.17,0,0,1,872.66,283.91Zm4.34,4.84a1.21,1.21,0,0,1-1.66.15c-.66-.52-1.38-1-1.49-1.77a1.32,1.32,0,0,1,1.95-1.35,4.3,4.3,0,0,1,1.35,1.3,1.25,1.25,0,0,1-.15,1.67Zm4.25,4.76a1.21,1.21,0,0,1-1.34,0,5.141,5.141,0,0,1-1.33-1.34,1.19,1.19,0,0,1,0-1.34,1.32,1.32,0,0,1,1.18-.67,3.09,3.09,0,0,1,2.19,2.37A1.15,1.15,0,0,1,881.25,293.51Zm3.26,4.53a3.889,3.889,0,0,1-1.42-1.43,1.31,1.31,0,0,1,1.19-1.94,3.19,3.19,0,0,1,2.21,2.22,1.33,1.33,0,0,1-1.98,1.11Z"
+                  transform="translate(-829.699 -268.303)"
+                  fill="#fff"
+                ></path>
+              </svg>
+            }
+            title="Small Ticket Size"
+            subtitle="The small ticket size allows investors to put in small chunks of funding to keep your startup afloat while mitigating their own risk."
+          />
+          <div className="work__dot__line">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="97"
+              height="3"
+              viewBox="0 0 97 3"
+            >
+              <line
+                id="Line_53"
+                data-name="Line 53"
+                x2="97"
+                transform="translate(0 1.5)"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-dasharray="2 3"
+              />
+            </svg>
           </div>
         </div>
       </div>

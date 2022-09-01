@@ -134,7 +134,15 @@ export default function Header() {
               Invester
               <title>Invester</title>
             </NavLink>
-            <a href="#" className="header__contant__link">
+            <a
+              href="#"
+              className="header__contant__link"
+              onClick={() => {
+                if (window.innerWidth < 900) {
+                  setIsOpen(false);
+                }
+              }}
+            >
               Start-Up
               <title>Start-Up</title>
             </a>
