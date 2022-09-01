@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../compounts/Header";
 import { invest } from "../assests";
+import CheckBox from "react-checkbox-css";
 
 export default function Invester() {
+  const [isChecked, setIschecked] = useState(false);
   return (
     <>
       <Header />
@@ -31,28 +33,27 @@ export default function Invester() {
             </div>
             <div className="invester__name__input">
               <div className="invester__input__start__div">
-                {/* <div className="invester__input__label">Email Address</div> */}
+                <div className="invester__input__label">Email Address</div>
                 <div className="invester__start">*</div>
               </div>
               <input type="text" name="" id="" placeholder="Your Email" />
-              <div className="error__invester"> Enter your value</div>
+              {/* <div className="error__invester"> Enter your value</div> */}
             </div>
             <div className="invester__container__form__input__box">
-              <div className="start__up__container__form__input__box__label">
+              <div className="invester__container__form__input__box__label">
                 Investor Type
-                <div className="invester__container__form__input__box__label__requird">
-                  *
-                </div>
               </div>
-              <div className="invester__container__form__input__box__content">
-                <input
-                  type="checkbox"
-                  className="invester__container__form__input__box__content__checkbox"
-                />
-                <div className="invester__container__form__input__box__content__label">
-                  Venture Capitalist
-                </div>
-              </div>
+              <CheckBox
+                value={isChecked}
+                label="Venture Capitalist  "
+                labelColor="#242424"
+                checkedColor="#081b35"
+                unCheckedColor="#fff"
+                iconColor="#ffffff"
+                onChange={() => {
+                  isChecked ? setIschecked(false) : setIschecked(true);
+                }}
+              />
             </div>
           </form>
         </div>
