@@ -514,6 +514,37 @@ body {
 .invester__container__form__input__box__content__label {
   margin-left: 9px;
 }
+.checkbox__investor {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox__investor::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  border-radius: 6px;
+  width: 22px;
+  left: 0;
+  background-color: #0a264e;
+}
+.checkbox__investor::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 2px;
+  background-color: #fff;
+  left: 5px;
+  top: 12px;
+  box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff,
+    4px -6px 0 #fff, 4px -8px 0 #fff;
+  transform: rotate(41deg);
+}
+.checkbox__investor__label {
+  padding: 5px 6px;
+  font-size: 16px;
+}
 @media (max-width: 600px) {
   .workus__contant__wraper__card {
     flex-direction: column;

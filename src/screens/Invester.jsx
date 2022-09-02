@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import Header from "../compounts/Header";
 import { invest } from "../assests";
-import CheckBox from "react-checkbox-css";
+import InputCheckBox from "../compounts/InputCheckBox";
 
 export default function Invester() {
-  const array = ["label", "label1", "label2"];
-  const [selectedArray, setSelectedArray] = useState([]);
-  console.log(selectedArray);
+  const investertype = [
+    { label: "Venture Capitalist" },
+    { label: "Angel Investor" },
+    { label: "New Entrant" },
+  ];
+  const asim = [
+    { label: "Venture Capitalist" },
+    { label: "Angel Investor" },
+    { label: "New Entrant" },
+  ];
+
   return (
     <>
       <Header />
@@ -45,13 +53,39 @@ export default function Invester() {
               <div className="invester__container__form__input__box__label">
                 Investor Type
               </div>
-              {array.map((item, index) => (
+
+              <InputCheckBox
+                Array={investertype}
+                placeholder="Investor Type"
+                label="Investor Type"
+              />
+
+              {/* {array.map((item, index) => (
                 <CheckboxWrapper
                   item={item}
                   selectedArray={selectedArray}
                   setSelectedArray={setSelectedArray}
                 />
-              ))}
+              ))} */}
+            </div>
+            <div className="invester__container__form__input__box">
+              <div className="invester__container__form__input__box__label">
+                Investor Type
+              </div>
+
+              <InputCheckBox
+                Array={investertype}
+                placeholder="Investor Type"
+                label="Investor Type"
+              />
+
+              {/* {array.map((item, index) => (
+                <CheckboxWrapper
+                  item={item}
+                  selectedArray={selectedArray}
+                  setSelectedArray={setSelectedArray}
+                />
+              ))} */}
             </div>
           </form>
         </div>
@@ -60,23 +94,23 @@ export default function Invester() {
   );
 }
 
-function CheckboxWrapper({ item, setSelectedArray, selectedArray }) {
-  const [isChecked, setIschecked] = useState(false);
-  return (
-    <CheckBox
-      value={isChecked}
-      label={item}
-      labelColor="#242424"
-      checkedColor="#081b35"
-      unCheckedColor="#fff"
-      iconColor="#ffffff"
-      onChange={(e) => {
-        isChecked ? setIschecked(false) : setIschecked(true);
+// function CheckboxWrapper({ item, setSelectedArray, selectedArray }) {
+//   const [isChecked, setIschecked] = useState(false);
+//   return (
+//     <CheckBox
+//       value={isChecked}
+//       label={item}
+//       labelColor="#242424"
+//       checkedColor="#081b35"
+//       unCheckedColor="#fff"
+//       iconColor="#ffffff"
+//       onChange={(e) => {
+//         isChecked ? setIschecked(false) : setIschecked(true);
 
-        e.target.checked
-          ? setSelectedArray([...selectedArray, item])
-          : setSelectedArray(selectedArray.filter((b) => b !== item));
-      }}
-    />
-  );
-}
+//         e.target.checked
+//           ? setSelectedArray([...selectedArray, item])
+//           : setSelectedArray(selectedArray.filter((b) => b !== item));
+//       }}
+//     />
+//   );
+// }
