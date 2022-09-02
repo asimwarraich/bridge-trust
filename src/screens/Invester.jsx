@@ -1,20 +1,27 @@
 import React, { useState } from "react";
 import Header from "../compounts/Header";
 import { invest } from "../assests";
-import InputCheckBox from "../compounts/InputCheckBox";
+import CheckBox from "react-checkbox-css";
 
 export default function Invester() {
-  const investertype = [
-    { label: "Venture Capitalist" },
-    { label: "Angel Investor" },
-    { label: "New Entrant" },
+  const array = ["Venture Capitalist", "Angel Investor", "New Entrant"];
+  const array1 = ["First Check", "Pre-seed", "Seedt", "Growth"];
+  const array2 = [
+    "<$100,000",
+    "$100,000-$500,000",
+    "$500,000-$900,000",
+    "$1 mn - $2 mn",
+    ">$ 2 mn",
   ];
-  const asim = [
-    { label: "Venture Capitalist" },
-    { label: "Angel Investor" },
-    { label: "New Entrant" },
+  const array3 = [
+    "Fintech",
+    "Edtech",
+    "Logistic",
+    "E-commerce",
+    "Agritech",
+    "IT Solution",
   ];
-
+  const [selectedArray, setSelectedArray] = useState([]);
   return (
     <>
       <Header />
@@ -53,39 +60,105 @@ export default function Invester() {
               <div className="invester__container__form__input__box__label">
                 Investor Type
               </div>
-
-              <InputCheckBox
-                Array={investertype}
-                placeholder="Investor Type"
-                label="Investor Type"
-              />
-
-              {/* {array.map((item, index) => (
+              {array.map((item, index) => (
                 <CheckboxWrapper
                   item={item}
                   selectedArray={selectedArray}
                   setSelectedArray={setSelectedArray}
                 />
-              ))} */}
+              ))}
             </div>
             <div className="invester__container__form__input__box">
               <div className="invester__container__form__input__box__label">
-                Investor Type
+                Startup Stage interested in to invest
               </div>
-
-              <InputCheckBox
-                Array={investertype}
-                placeholder="Investor Type"
-                label="Investor Type"
-              />
-
-              {/* {array.map((item, index) => (
+              {array1.map((item, index) => (
                 <CheckboxWrapper
                   item={item}
                   selectedArray={selectedArray}
                   setSelectedArray={setSelectedArray}
                 />
-              ))} */}
+              ))}
+            </div>
+            <div className="invester__radio__input">
+              <div className="invester__container__form__input__box__label">
+                Ticket Size To Invest
+              </div>
+              <div className="invester__form__radio__label">
+                <input
+                  type="radio"
+                  name="invester__radio__input__box"
+                  id="invester__radio__input__box__label"
+                />
+                <label htmlFor="invester__radio__input__box__label">
+                  &#60;$100,000
+                </label>
+              </div>
+              <div className="invester__form__radio__label">
+                <input
+                  type="radio"
+                  name="invester__radio__input__box"
+                  id="invester__radio__input__box__label"
+                />
+                <label htmlFor="invester__radio__input__box__label">
+                  $100,000-$500,000
+                </label>
+              </div>
+              <div className="invester__form__radio__label">
+                <input
+                  type="radio"
+                  name="invester__radio__input__box"
+                  id="invester__radio__input__box__label"
+                />
+                <label htmlFor="invester__radio__input__box__label">
+                  $500,000-$900,000
+                </label>
+              </div>
+              <div className="invester__form__radio__label">
+                <input
+                  type="radio"
+                  name="invester__radio__input__box"
+                  id="invester__radio__input__box__label"
+                />
+                <label htmlFor="invester__radio__input__box__label">
+                  $1 mn - $2 mn
+                </label>
+              </div>
+              <div className="invester__form__radio__label">
+                <input
+                  type="radio"
+                  name="invester__radio__input__box"
+                  id="invester__radio__input__box__label"
+                />
+                <label htmlFor="invester__radio__input__box__label">
+                  &#62;$ 2 mn
+                </label>
+              </div>
+            </div>
+
+            {/* <div className="invester__container__form__input__box">
+              <div className="invester__container__form__input__box__label">
+                Ticket Size To Invest
+              </div>
+              {array2.map((item, index) => (
+                <CheckboxWrapper
+                  item={item}
+                  selectedArray={selectedArray}
+                  setSelectedArray={setSelectedArray}
+                />
+              ))}
+            </div> */}
+            <div className="invester__container__form__input__box">
+              <div className="invester__container__form__input__box__label">
+                Industry Interested In
+              </div>
+              {array3.map((item, index) => (
+                <CheckboxWrapper
+                  item={item}
+                  selectedArray={selectedArray}
+                  setSelectedArray={setSelectedArray}
+                />
+              ))}
             </div>
           </form>
         </div>
@@ -94,23 +167,23 @@ export default function Invester() {
   );
 }
 
-// function CheckboxWrapper({ item, setSelectedArray, selectedArray }) {
-//   const [isChecked, setIschecked] = useState(false);
-//   return (
-//     <CheckBox
-//       value={isChecked}
-//       label={item}
-//       labelColor="#242424"
-//       checkedColor="#081b35"
-//       unCheckedColor="#fff"
-//       iconColor="#ffffff"
-//       onChange={(e) => {
-//         isChecked ? setIschecked(false) : setIschecked(true);
+function CheckboxWrapper({ item, setSelectedArray, selectedArray }) {
+  const [isChecked, setIschecked] = useState(false);
+  return (
+    <CheckBox
+      value={isChecked}
+      label={item}
+      labelColor="#242424"
+      checkedColor="#081b35"
+      unCheckedColor="#fff"
+      iconColor="#ffffff"
+      onChange={(e) => {
+        isChecked ? setIschecked(false) : setIschecked(true);
 
-//         e.target.checked
-//           ? setSelectedArray([...selectedArray, item])
-//           : setSelectedArray(selectedArray.filter((b) => b !== item));
-//       }}
-//     />
-//   );
-// }
+        e.target.checked
+          ? setSelectedArray([...selectedArray, item])
+          : setSelectedArray(selectedArray.filter((b) => b !== item));
+      }}
+    />
+  );
+}
