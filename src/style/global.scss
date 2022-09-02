@@ -544,25 +544,6 @@ body {
   position: relative;
   cursor: pointer;
 }
-.invester__radio__input__box__label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgb(114, 41, 41);
-  border-radius: 100%;
-  background: rgb(130, 37, 37);
-}
-.invester__radio__input__box__label::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  width: 12px;
-  height: 20px;
-  background-color: var(--primart);
-}
 @media (max-width: 600px) {
   .workus__contant__wraper__card {
     flex-direction: column;
